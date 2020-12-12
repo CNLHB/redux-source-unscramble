@@ -9,7 +9,9 @@ class User extends Component {
     return (
       <div>
         user
+        <p>
         <button onClick={this.props.onIncreaseClick}>modifyNameAction</button>
+        </p>
         <p>{this.props.userName}</p>
       </div>
     );

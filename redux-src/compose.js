@@ -22,3 +22,13 @@ export default function compose(...funcs) {
     return  (...args) => a(b(...args))
   })
 }
+
+
+
+function name(params) {
+  
+}
+function age(params) {
+  
+}
+compose(name,age)

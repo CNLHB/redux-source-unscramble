@@ -3,7 +3,7 @@ import compose from './compose'
 /**
  * 
  * Creates a store enhancer that applies middleware to the dispatch method
- * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * of the Redux store. This is handy for a varbindActionCreatoriety of tasks, such as expressing
  * asynchronous actions in a concise manner, or logging every action payload.
  *
  * See `redux-thunk` package as an example of the Redux middleware.
@@ -29,11 +29,12 @@ export default function applyMiddleware(...middlewares) {
           `Other middleware would not be applied to this dispatch.`
       )
     }
-
+    //中间件可以拿到老的state的值，以及更新的action
     const middlewareAPI = {
       getState: store.getState,
       dispatch: (...args) => dispatch(...args)
     }
+    //把中间件包装成函数执行后再执行中间件
     const chain = middlewares.map(middleware => middleware(middlewareAPI))
     dispatch = compose(...chain)(store.dispatch)
 

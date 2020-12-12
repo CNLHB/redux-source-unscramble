@@ -18,12 +18,21 @@ class Home extends Component{
     }
     render(){
     return <div>
-        Home
-
-        <button  onClick={()=>{store.dispatch(addAgeAction)}}>age++</button>
+                Home
+        <p style={{margin:10,padding:10}}>
+        <button  style={{padding:30,margin:30}} onClick={()=>{store.dispatch(addAgeAction)}}>age++</button>
+        </p>
         <p>
            {this.state.age}
         </p>
+        <div style={{margin:10}}>
+            <div  style={{margin:30}}>2
+
+            </div>
+            1
+
+        </div>
+
     </div>
     }
 }

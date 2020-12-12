@@ -1,7 +1,7 @@
 import './App.css';
 import { Provider } from 'react-redux'
 import User from './page/user/User'
-import Home from './page/home/home'
+import Home from './page/home/Home'
 import { createLogger } from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux'
 const logger = createLogger();
